@@ -1,0 +1,8 @@
+.account{
+    text-align: center;
+}
+
+.account p img{
+    border-radius: .25rem;
+    box-shadow: 0.3rem 0.3rem 0.2rem rgba(0,0,0,0.8);
+}

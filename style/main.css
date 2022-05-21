@@ -1,0 +1,121 @@
+
+*{
+    box-sizing: border-box; /* Uses border-box */
+}
+
+html, body{
+    margin: 0; /* removes whitespace along borders*/
+    padding: 0;
+}
+
+#titleNav{
+    display: flex;
+    flex-direction: column; /* for mobile layouts, display tite and nav on top of eachother*/
+
+    position: fixed; /* Fixes the element to the top left of the browser */
+    top: 0rem;
+    left: 0rem;
+    z-index: 1; /* Places the element on the top layer*/
+    width: 100%;
+    white-space: nowrap;
+
+    padding: 0.75rem;
+    padding-top: 1rem;
+    background-color: #E2AC5D;
+    box-shadow: 0rem 0rem 1rem black; /* header 3-D effect*/
+}
+
+#title{
+    letter-spacing: 0.1rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#nav{
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+#nav a{
+    text-decoration: none; /* removes underline from links */
+}
+
+
+#nav a:link{
+    color: black; /* link color in nav bar*/
+}                               
+
+#nav a:visited{
+    color: black; /* link color in nav bar after click*/
+}
+
+#nav a:hover{
+    color: white; /* link color while hovering*/
+}
+
+body{
+    /* Background image*/
+    background-image: url(../pics/louvreEdit.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom center;
+}
+
+#content{
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 6rem;
+    color: black;
+
+}
+
+#content a{
+    text-decoration: none;
+}
+
+#content a:link{
+    color: blue;
+}
+
+#content a:hover{
+    color: red;
+}
+
+#content a:visited{
+    color: #8535D1;
+}
+
+
+#footer{
+    /* positioning */
+    text-align: center;
+    position: fixed;
+    bottom: 0rem;
+    z-index: 1;
+
+    /* color and sizing*/
+    padding: 0.5rem;
+    width: 100%;
+    background-color: #E2AC5D;
+    font-size: 1rem;
+
+    /* gives 3-D effect to footer */
+    box-shadow: 0rem 0rem 1rem black;
+}
+
+/* Media query used to switch to desktop view*/
+@media only screen and (min-width: 40rem) {
+
+    #content{
+        margin-top: 4rem;
+    }
+    
+    
+    #titleNav{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+}
+

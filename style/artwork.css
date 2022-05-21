@@ -1,0 +1,30 @@
+.artwork{
+    background-color: #FFD18B;
+    margin-bottom: 2rem;
+}
+
+.artwork img{
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 70%;   
+    background-color: #AAAAAA;
+    border-radius: .25rem;
+}
+
+.artwork p{
+    margin: 1rem;
+}
+
+.artwork h3{
+    margin-left: 1rem;
+}
+
+.artwork button{
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+}
+
+.artwork input{
+    margin-bottom: 1rem;
+    background-color: #FFE3C7;
+}

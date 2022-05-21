@@ -1,0 +1,24 @@
+/* Style the HTML table that shows the tabular database data */
+
+.insertArea {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.insertArea h2 {
+    margin-left:-1rem;
+    margin-bottom:0rem;
+}
+
+.insertArea button {
+    margin-left:-1.5rem;
+}
+.insertArea td {
+    padding-left: 0.5rem;
+    font-weight: bold;
+    font-size:0.9rem;
+}
+
+.insertArea .error {
+    color:#7B241C; border:none;
+}

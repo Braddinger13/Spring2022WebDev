@@ -1,0 +1,33 @@
+.clickSort{
+    text-align: center;
+}
+
+.clickSort table{
+    margin: auto;
+    width: 80%;
+    margin-bottom: 2.5rem;
+}
+
+.clickSort h2{
+    text-align: center;
+}
+
+.clickSort th{
+    background-color: #E2AC5D;
+    padding: .3rem;
+}
+
+.clickSort td{
+    background-color: #F2D9B5;
+    padding: .3rem;
+}
+
+.clickSort img{
+    border-radius: 1rem;
+}
+
+.clickSort input{
+    text-align: center;
+}
+
+

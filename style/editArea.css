@@ -1,0 +1,25 @@
+/* Style the HTML table that shows the tabular database data */
+
+.editArea {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.editArea h2 {
+    margin-left:-1rem;
+    margin-bottom:0rem;
+}
+
+.editArea button {
+    margin: 0.5rem;
+}
+
+.editArea td {
+    padding-left: 0.5rem;
+    font-weight: bold;
+    font-size:0.9rem;
+}
+
+.editArea .error {
+    color:#7B241C; border:none;
+}
