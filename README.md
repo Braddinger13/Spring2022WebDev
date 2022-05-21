@@ -4,7 +4,7 @@ This was a project that I completed throughout the enirety of my Spring 2022 sem
 It is accessible at this link: http://cis-linux2.temple.edu:8080/SP22_3308_tuk81273/index.html
 
 
-I did not wrtite every single file in this repository!!!!!
+I did not write every file in this repository!!!!!
 
 Many of the files in here are from Sally Kyvernitis, my professor that semester.
 
