@@ -1,0 +1,57 @@
+[
+    {
+        "artworkId": "1",
+        "artworkName": "Mona Lisa",
+        "image": "pics/mona-lisa.jpg",
+        "yearCompleted": "1503",
+        "copies": "1",
+        "artworkDescription": "Possibly the most famous painting ever, created by Leonardo da Vinci",
+        "type": "Painting",
+        "webUserId": "1",
+        "userEmail": "tuk81273@temple.edu"
+    },
+    {
+        "artworkId": "2",
+        "artworkName": "Starry Night",
+        "image": "pics/starryNight.jpg",
+        "yearCompleted": "1889",
+        "copies": "",
+        "artworkDescription": "A personal Favorite",
+        "type": "Painting",
+        "webUserId": "5",
+        "userEmail": "vanGogh@art.org"
+    },
+    {
+        "artworkId": "3",
+        "artworkName": "Love Sculpture",
+        "image": "pics/love-sculpture.jpg",
+        "yearCompleted": "1965",
+        "copies": "71",
+        "artworkDescription": "LOVE",
+        "type": "Sculpture",
+        "webUserId": "7",
+        "userEmail": "email@email.com"
+    },
+    {
+        "artworkId": "4",
+        "artworkName": "Relativity",
+        "image": "pics/mc-escher-relativity.jpg",
+        "yearCompleted": "",
+        "copies": "",
+        "artworkDescription": "",
+        "type": "Drawling",
+        "webUserId": "3",
+        "userEmail": "escher@gmail.com"
+    },
+    {
+        "artworkId": "5",
+        "artworkName": "Day And Night",
+        "image": "pics/day-and-night.jpg",
+        "yearCompleted": "1953",
+        "copies": "2",
+        "artworkDescription": "",
+        "type": "Drawling",
+        "webUserId": "3",
+        "userEmail": "escher@gmail.com"
+    }
+]
