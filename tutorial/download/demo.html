@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Tutorial Demo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="flippingGallery.css" rel="stylesheet" type="text/css"/>
+        
+        <style>
+            body{
+                background-color: #E2AC5D;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div id="gallery"></div>
+
+        <script>
+            "use strict";
+        </script>
+
+        <script src="MakeFlippingGallery.js"></script>
+
+        <script>
+            var ele = document.createElement("div");
+
+            var galleryObj =
+                    {
+                        title: "My Paintings",
+                        artList: [{
+                                name: "Starry Night",
+                                image: "pics/starryNight.jpg",
+                                tags: "painting VanGogh"
+                            }, {
+                                name: "Mona Lisa",
+                                image: "pics/mona-lisa.jpg",
+                                tags: "painting DaVinci"
+                            },
+                            {
+                                name: "Cafe at Night",
+                                image: "pics/cafe.jpg",
+                                tags: "painting VanGogh"
+                            },
+                            {
+                                name: "Day and Night",
+                                image: "pics/day-and-night.jpg",
+                                tags: "Drawling Escher"
+                            },
+                            {
+                                name: "Relativity",
+                                image: "pics/mc-escher-relativity.jpg",
+                                tags: "Escher"
+                            }
+                            
+                        ]                   
+                    };
+
+            var galleryObj2 = {
+                title: "Sculptures and statues",
+                artList: [{
+                        name: "LOVE Sculpture",
+                        image: "pics/love-sculpture.jpg",
+                        tags: "metal sculpture"
+                    },
+                    {
+                        name: "Rocky Statue",
+                        image: "pics/rocky.jpg",
+                        tags: "metal statue"
+                    },
+                    {
+                        name: "David",
+                        image: "pics/michelangelo-david.jpg",
+                        tags: "marble statue"
+                    }
+                ]
+            };
+
+            ele.appendChild(MakeFlippingGallery(galleryObj));
+            ele.appendChild(MakeFlippingGallery(galleryObj2));
+
+            document.getElementById('gallery').appendChild(ele);
+
+        </script>
+    </body>
+</html>

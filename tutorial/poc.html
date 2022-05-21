@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Proof of Concept</title>
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .filterDiv {
+                float: left;
+                color: black;
+                background-color: transparent;
+                width: 7rem;
+                height: 7rem;
+                line-height: 7rem;
+                text-align: center;
+                margin: .2rem;
+                display: none;
+                border: solid black;
+                perspective: 1000px;
+            }
+
+            .show {
+                display: block;
+            }
+
+            .container {
+                margin-top: 1rem;
+                overflow: hidden;
+
+            }
+
+            /* Style the buttons */
+            .btn {
+                border: none;
+                outline: none;
+                padding: .75rem 1rem;
+                background-color: #f1f1f1;
+                cursor: pointer;
+            }
+
+            .btn:hover {
+                background-color: #ddd;
+            }
+
+            .btn.active {
+                background-color: #666;
+                color: white;
+            }
+
+            .cardInner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+            }
+
+            .filterDiv:hover .cardInner{
+                transform: rotateY(180deg);
+            }
+
+            .cardFront, .cardBack {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+            }
+
+            .cardFront {
+                background-color: #bbb;
+                color: black;
+            }
+
+            .cardBack {
+                color: white;
+                background-color: #008B8B;
+                transform: rotateY(180deg);
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <h3 id="title"></h3>
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+            <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+            <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+        </div>
+
+        <div class="container">
+            <div class="filterDiv cars">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        BMW
+                    </div>
+                    <div class="cardBack">
+                        BMW back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv colors fruits">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Orange
+                    </div>
+                    <div class="cardBack">
+                        Orange back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv cars">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Volvo
+                    </div>
+                    <div class="cardBack">
+                        Volvo back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv colors">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Red
+                    </div>
+                    <div class="cardBack">
+                        Red back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv cars animals">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Mustang
+                    </div>
+                    <div class="cardBack">
+                        Mustang back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv colors">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Blue
+                    </div>
+                    <div class="cardBack">
+                        Blue back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv animals">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Cat
+                    </div>
+                    <div class="cardBack">
+                        Cat back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv animals">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Dog
+                    </div>
+                    <div class="cardBack">
+                        Dog back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv fruits">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Melon
+                    </div>
+                    <div class="cardBack">
+                        Melon back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv fruits animals">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Kiwi
+                    </div>
+                    <div class="cardBack">
+                        Kiwi back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv fruits">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Banana
+                    </div>
+                    <div class="cardBack">
+                        Banana back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv fruits">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Lemon
+                    </div>
+                    <div class="cardBack">
+                        Lemon back
+                    </div>
+                </div>
+            </div>
+
+            <div class="filterDiv animals">
+                <div class="cardInner">
+                    <div class="cardFront">
+                        Cow
+                    </div>
+                    <div class="cardBack">
+                        Cow back
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var k = 0;
+            var txt = 'Typewriter Title';
+            var speed = 100;
+
+            typeWriter();
+            function typeWriter() {
+
+                if (k < txt.length) {
+                    document.getElementById("title").innerHTML += txt.charAt(k);
+                    k++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            filterSelection("all");
+            function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("filterDiv");
+                if (c === "all")
+                    c = "";
+                for (i = 0; i < x.length; i++) {
+                    w3RemoveClass(x[i], "show");
+                    if (x[i].className.indexOf(c) > -1){
+                        w3AddClass(x[i], "show");
+                    }
+                }
+            }
+
+            function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    if (arr1.indexOf(arr2[i]) === -1) {
+                        element.className += " " + arr2[i];
+                    }
+                }
+            }
+
+            function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                    while (arr1.indexOf(arr2[i]) > -1) {
+                        arr1.splice(arr1.indexOf(arr2[i]), 1);
+                    }
+                }
+                element.className = arr1.join(" ");
+            }
+
+            // Add active class to the current button (highlight it)
+            var btnContainer = document.getElementById("myBtnContainer");
+            var btns = btnContainer.getElementsByClassName("btn");
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function () {
+                    var current = document.getElementsByClassName("active");
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                });
+            }
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,92 @@
+.flippingGallery *{
+    box-sizing: border-box;
+}
+
+.flippingGallery{
+    box-sizing: border-box;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.flippingGallery .filterDiv{
+    float: left;
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    width: 12rem;
+    height: 12rem;
+    line-height: 12rem;
+    text-align: center;
+    margin: .2rem;
+    margin-bottom: 2rem;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 40rem) {
+
+    .flippingGallery .filterDiv{
+        float: left;
+        flex-direction: row;
+    }
+}
+
+.flippingGallery .show{
+    display: flex;
+}
+
+.flippingGallery .btn{
+    border: none;
+    outline: none;
+    padding: .75rem 1rem;
+    cursor: pointer;
+    margin-left: 0.75rem;
+    background-color: #808080;
+    color: white;
+}
+
+.flippingGallery .btn:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.flippingGallery h3{
+    padding: 1rem;
+}
+
+.flippingGallery img{
+    width: 80%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    
+}
+
+/*Displaying Card*/
+.flippingGallery .cardInner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flippingGallery .filterDiv:hover .cardInner{
+    transform: rotateY(180deg);
+}
+
+.flippingGallery .cardFront, .cardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flippingGallery .cardBack {
+    color: white;
+    background-color: #515151;
+    transform: rotateY(180deg);
+}
+
